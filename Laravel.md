@@ -1,6 +1,6 @@
-使用 Laravel 过程中所有知识点整理。
+> 以下是我在使用 Laravel 过程中，所有知识点的整理。
 
-请先看文章：[使用 Laravel 前的准备工作](https://baooab.wordpress.com/2016/12/31/%e4%bd%bf%e7%94%a8-laravel-%e5%89%8d%e7%9a%84%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c/)。
+在继续看下去之前，先看这篇文章：[使用 Laravel 前的准备工作](https://baooab.wordpress.com/2016/12/31/%e4%bd%bf%e7%94%a8-laravel-%e5%89%8d%e7%9a%84%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c/)。
 ## 目录
 
 - [Composer 部分](#Composer)
@@ -143,7 +143,7 @@ e
 <a name="LaravelCommand">
 ## `laravel` 命令
 
-执行 
+执行
 
 ```
 laravel
@@ -168,20 +168,20 @@ Options:
  2 for more verbose output and 3 for debug
 
 Available commands:
-  help  显示帮助信息。
-  list  所有可使用命令清单。
-  new   创建一个新的 Laravel 项目。
+  help  显示帮助信息
+  list  所有可使用命令清单
+  new   创建一个新的 Laravel 项目
 ```
 
-最好用命令绝对是
+其中最好用命令绝对是
 
 ```
 laravel new blog
 ```
 
-即创建了一个名为 `blog` 项目，里面包含完整 Laravel 版本包！
+这样就轻松创建了一个名为 `blog` 项目，里面包含完整 Laravel 版本包！
 
-等同于 Composer 命令
+这条命令等同于 Composer 命令的
 
 ```
 composer create-project --prefer-dist laravel/laravel blog
