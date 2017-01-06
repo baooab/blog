@@ -6,6 +6,7 @@
 - [Composer 部分](#Composer)
 - [`php artisan` 命令](#PHPArtisanCommand)
 - [`laravel` 命令](#LaravelCommand)
+- [琐碎](#foo)
 
 <a name="Composer">
 ## Composer 部分
@@ -185,6 +186,24 @@ laravel new blog
 
 ```
 composer create-project --prefer-dist laravel/laravel blog
+```
+
+<a name="foo">
+## 琐碎
+
+```bash
+php artisan make:model Wiki -m
+
+php artisan make:controller WikiController --resource
+
+Soft Deleting
+
+composer dump-autoload
+
+php artisan migrate:rollback
+
+php artisan vendor:publish --tag=laravel-pagination
+在 resources/views/vendor/pagination 文件夹下修改分页样代码
 ```
 
 （完）
