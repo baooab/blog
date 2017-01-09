@@ -653,6 +653,35 @@ elixir(function(mix) {
 
 不再赘述。
 
+### 资源版本
+
+```
+elixir(function(mix) {
+    mix.version('css/app.css');
+});
+```
+`version` 方法接收一个相对于 `public` 目录的文件名称，接着为你的文件名称加上唯一的哈希值，以防止文件被缓存。举例来说，生成出来的文件名称可能像这样：`all-16d570a7.css`
+
+编译后的文件在 `/public/build/css` 或 `/public/build/js`  中。
+
+```
+{{ elixir('css/app.css') }}
+```
+
+被解析为
+
+```
+/build/css/app-86ff5d31a2.css
+```
+
+在页面中这样引入
+
+```
+<link rel="stylesheet" href="{{ asset(elixir('css/app.css')) }}">
+```
+
+`asset` 方法解析静态资源的绝对路径，相对于 `public` 目录，即 `{{ asset('demo.css') }}` 被解析为 `http://localhost/another/public/demo.css`。
+
 <a name="foo">
 ## 琐碎
 
