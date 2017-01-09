@@ -6,6 +6,7 @@
 - [Composer 部分](#Composer)
 - [`php artisan` 命令](#PHPArtisanCommand)
 - [`laravel` 命令](#LaravelCommand)
+- [`Laravel` 文档拾遗](#LaravalDocStudy)
 - [琐碎](#foo)
 
 <a name="Composer">
@@ -187,6 +188,10 @@ laravel new blog
 ```
 composer create-project --prefer-dist laravel/laravel blog
 ```
+<a name="LaravalDocStudy">
+## `Laravel` 文档拾遗
+
+
 
 <a name="foo">
 ## 琐碎
