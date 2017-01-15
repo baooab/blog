@@ -131,3 +131,7 @@ $factory->define(App\Task::class, function (Faker\Generator $faker) {
 ```
 php artisan db:seed
 ```
+
+### 使用 PDO 调用 MySQL 存储过程
+
+http://www.mysqltutorial.org/php-calling-mysql-stored-procedures/
