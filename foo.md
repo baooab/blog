@@ -2,7 +2,30 @@
 
 ## 2017/01/16 
 
+### 软删除
 
+以 `User` 为例：
+
+User Model：
+
+```
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+use SoftDeletes;
+
+/**
+ * The attributes that should be mutated to dates.
+ *
+ * @var array
+ */
+protected $dates = ['deleted_at'];
+```
+
+User Migration：
+
+```
+$table->softDeletes();
+```
 
 ## 2017/01/15 使用 PDO 从 MySQL 中 SELECT 出数据
 
