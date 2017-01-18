@@ -1,5 +1,16 @@
 ## 流水操作
 
+## 2017/1/18
+
+```javascript
+// http://www.ruanyifeng.com/blog/2013/05/jquery-free.html
+function $$(selector, context) {
+    context = context || document;
+    var elements = context.querySelectorAll(selector);
+    return Array.prototype.slice.call(elements);
+}
+```
+
 ## 2017/01/16 
 
 ### 软删除
