@@ -1,5 +1,78 @@
 ## 流水操作
 
+## 2017/1/19
+
+JSONP 使用 script 标签 url 进脚本，这个脚本会调用本地的一个方法（相当于模拟了一个回调），被调用的本地方法的名字是 script 标签 url 进脚本时 url 中参数指明的，如：`?jsonp=callback`。
+
+short and to the point 简短而中肯
+
+weed out any bugs that might’ve snuck through 剔除所有悄悄通过的 bug
+
+看了 jQuery 官方的博客，从 2006 年初看到 2011 年 5 月份。下面是我的笔记：
+
+```
+http://blog.jquery.com/2006/06/30/jquery-10-alpha-release/
+http://blog.jquery.com/2006/08/26/jquery-10/
+
+http://blog.jquery.com/2007/01/14/jquery-birthday-11-new-site-new-docs/
+jQuery 一周年发布 1.1 版本。
+引入新方法 .parents() .css() .attr() .one() .unbind() 代替旧方法，体积减小 40% 多。
+
+http://blog.jquery.com/2007/08/24/jquery-114-faster-more-tests-ready-for-12/
+jQuery 1.1.4 是 1.1.x 分支的最后一个版本。 
+引入 $.noConflict()。
+当你使用
+
+var jq=$.noConflict();
+
+原来可使用的 $ 和 jQuery 都无效，有效的仅是 jq。
+.slice()  :has()
+.extend() 递归 merge，加参数 true 会更深一层 merge。
+宣布了一些过时的函数以及替代函数。
+
+http://blog.jquery.com/2007/09/10/jquery-1-2-released/
+$.getScript 
+$.getJSON (using JSONP) 是 jsonp 的话，在查询字符串里添加「=?」。 
+.height() / .width() for document and window
+:header 匹配所有的标题 （h1, h2, h3, h4, h5, 和 h6 标签元素）。
+jQuery 1.2 Full Release Notes → http://blog.jquery.com/2007/09/10/jquery-12-jqueryextendawesome/
+
+jQuery 1.2.1 
+.eq() 方法回归，因为有大量插件依赖。起先提供的替代方法 .slice() 使用的并不优雅。
+
+jQuery in Action 2007.10
+
+jQuery 1.2.3 命名事件
+$("div").bind("click.plugin", function(){}); 这个 click 事件的名字叫 plugin。解绑用 $("div").unbind(".plugin")
+
+jQuery 1.2.6 忽略了 1.2.4  和 1.2.5 版本，因为 built incorrectly。 
+
+2008 年 jQuery 是荒年，纠缠在 1.2.2 之后版本中，感觉无进步，就是在改 bug。
+
+http://blog.jquery.com/2009/01/14/jquery-13-and-the-jquery-foundation/
+使用 Sizzle 引擎（从 jQuery 中独立出的），模块重写和修正。优化了。.1 .2 版本 bug 局部修复。
+
+http://blog.jquery.com/2009/03/13/this-week-in-jquery-vol-1/
+This Week in jQuery  每周一次报道
+一直到 2010 底，出到 jQuery 1.4.4  版本，就没有什么大动作了。
+
+jQuery中的.bind()、.live()和.delegate()之间区别分析？？
+
+http://blog.jquery.com/2011/01/31/jquery-15-released/
+完全重写 Ajax 模块，引入延迟对象。jQuery.ajax 返回 jqXHR 对象。
+
+var jqxhr = $.ajax({ url: "example.php" })
+    .success(function() { alert("success"); })
+    .error(function() { alert("error"); })
+    .complete(function() { alert("complete"); });
+
+http://blog.jquery.com/2011/05/03/jquery-16-released/
+重写了 Attribute 模块。
+https://code.jquery.com/jquery/
+
+http://motherrussia.polyester.se/jquery-plugins/tablesorter
+```
+
 ## 2017/1/18
 
 ```javascript
