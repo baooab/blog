@@ -6,6 +6,6 @@
 
 《吟风阁杂剧》（杨潮观著，上海古籍出版社，1983 年）收录了《偷桃捉住东方朔》，173 页，竖版排版。
 
-《吟风阁杂剧》电子书下载地址：[http://pan.baidu.com/s/1slF8Z9r](http://pan.baidu.com/s/1slF8Z9r)，提取密码：njb2。
+《吟风阁杂剧》电子书下载地址：[http://pan.baidu.com/s/1slF8Z9r](http://pan.baidu.com/s/1slF8Z9r)，提取密码：njb2 。
 
 （完）
