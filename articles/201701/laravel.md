@@ -4,8 +4,8 @@
 
 ## 目录
 
-- 一、[软删除](#soft-deleting)
-- 二、[迁移和种子](#migrations-and-seeder)
+- 一、[软删除](#一soft-deleting)
+- 二、[迁移和种子](#二migrations-and-seeder)
 
 ## 一、[Soft Deleting](https://laravel.com/docs/5.3/eloquent#soft-deleting)
 
@@ -121,7 +121,7 @@ $ php artisan migrate
 php artisan db:seed
 ```
 
-### 尾牙
+## 尾牙
 
 ```
 $ composer dump-autoload
