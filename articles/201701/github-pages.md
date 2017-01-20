@@ -1,4 +1,4 @@
-## 使用 Github Pages 创建站
+## 使用 Github Pages 创建网站
 
 在 Github 上如果你拥有一个 repository ，你就可以使用 Github Pages 为你的 repository 创建一个网站。
 
