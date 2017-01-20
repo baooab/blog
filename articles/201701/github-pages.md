@@ -26,14 +26,4 @@ $ git push -u origin master
 
 点击 repository 「Settings」选项卡。「GitHub Pages」>「Source」> 选择「master branch」> 点击「save」。
 
-### #3. 日常使用
-
-在「添加/修改」了 repository 内容后，使用下面语句提交至 Github 。
-
-```
-$ git commit -a -m "update conntent"
-
-$ git push -u origin master
-```
-
 （完）
