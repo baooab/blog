@@ -1,5 +1,13 @@
 ## 流水操作
 
+## 2017/1/20
+
+[Arukas.io（樱花docker）免费搭建个人SS服务](http://www.iqcni.com/other/12.html)
+
+[SwitchyOmega for Chromium](/FelisCatus/SwitchyOmega/releases)
+
+[ShadowsocksR](/shadowsocksr/shadowsocksr-csharp/releases)
+
 ## 2017/1/19
 
 JSONP 使用 script 标签 url 进脚本，这个脚本会调用本地的一个方法（相当于模拟了一个回调），被调用的本地方法的名字是 script 标签 url 进脚本时 url 中参数指明的，如：`?jsonp=callback`。
