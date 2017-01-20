@@ -1,13 +1,13 @@
-## 使用 Laravel
+# 使用 Laravel
 
 基于 Laravel 5.3 。
 
-### 目录
+## 目录
 
-1. [软删除](#soft-deleting)
-2. [迁移文件](##migrations)
+- 一、[软删除](#soft-deleting)
+- 二、[迁移和种子](#migrations-and-seeder)
 
-### [Soft Deleting](https://laravel.com/docs/5.3/eloquent#soft-deleting)
+## 一、[Soft Deleting](https://laravel.com/docs/5.3/eloquent#soft-deleting)
 
 Model ：
 
@@ -54,7 +54,9 @@ truly remove ：
 $flight->forceDelete();
 ```
 
-### [Migrations](https://laravel.com/docs/5.3/migrations#columns)
+## 二、[Migrations and Seeder](https://laravel.com/docs/5.3/migrations#columns)
+
+### 2.1 创建迁移文件
 
 创建迁移文件并指明要创建的表名：
 
@@ -72,18 +74,51 @@ if (Schema::hasTable('users')) {
 }
 ```
 
-```
-# 1. 运行迁移
-$ php artisan migrate
-
-# 2. 回滚迁移
-$ php artisan migrate:rollback
-```
-
 [修改字段](https://laravel-china.org/docs/5.3/migrations#modifying-columns) 需要下载依赖 `doctrine/dbal` 。
 
 ```
 $ composer require doctrine/dbal
+```
+
+### 2.2 创建种子文件
+
+```
+$ php artisan make:seeder EmployeesTableSeeder
+```
+
+`EmployeesTableSeeder` 的内容：
+
+```php
+factory(App\Employee::class, 20)->create();
+```
+
+`DatabaseSeeder` 的内容：
+
+```php
+$this->call(EmployeesTableSeeder::class);
+```
+
+写 `database\factories\ModelFactory.php` （写法在 [这里](https://github.com/fzaninotto/Faker)）：
+
+```php
+$factory->define(App\Employee::class, function (Faker\Generator $faker) {
+
+    return [
+        'firstname' => $faker->firstName,
+        'lastname' => $faker->lastName,
+        'jobtitle' => $faker->jobTitle,
+    ];
+});
+```
+
+### 2.3 运行迁移和种子文件
+
+```
+# 1. 运行迁移
+$ php artisan migrate
+
+# 2. 种下种子
+php artisan db:seed
 ```
 
 ### 尾牙
