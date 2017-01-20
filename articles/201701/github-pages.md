@@ -31,7 +31,7 @@ $ git push -u origin master
 在「添加/修改」了 repository 内容后，使用下面语句提交至 Github 。
 
 ```
-$ git commit -a -m 'update conntent'
+$ git commit -a -m "update conntent"
 
 $ git push -u origin master
 ```
