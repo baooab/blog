@@ -4,8 +4,8 @@
 
 ### 目录
 
-- [软删除](#Soft Deleting)
-- [迁移文件](#Migrations)
+1. [软删除](#soft-deleting)
+2. [迁移文件](##migrations)
 
 ### [Soft Deleting](https://laravel.com/docs/5.3/eloquent#soft-deleting)
 
@@ -34,7 +34,7 @@ class Flight extends Model
 
 Migration ：
 
-```
+```php
 Schema::table('flights', function ($table) {
     $table->softDeletes();
 });
@@ -42,7 +42,7 @@ Schema::table('flights', function ($table) {
 
 restore ：
 
-```
+```php
 App\Flight::withTrashed()
         ->where('airline_id', 1)
         ->restore();
@@ -50,15 +50,13 @@ App\Flight::withTrashed()
 
 truly remove ：
 
-```
+```php
 $flight->forceDelete();
 ```
 
 ### [Migrations](https://laravel.com/docs/5.3/migrations#columns)
 
-#### #1. 创建迁移文件
-
-并指明要创建的表明。
+创建迁移文件并指明要创建的表名：
 
 ```
 $ php artisan make:migration create_employees_table --create=employees
@@ -68,7 +66,7 @@ $ php artisan make:migration create_employees_table --create=employees
 
 表是否存在。
 
-```
+```php
 if (Schema::hasTable('users')) {
     //
 }
