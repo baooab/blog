@@ -1,6 +1,9 @@
 ## Blog Archives
 
 ### 2017 年 1 月
+
+- [安装 Git 和 Node](articles/201701/setup-git-and-node.md)
+- [WebSocket](articles/201701/websocket.md)
 - [用 Chrome 冲浪](articles/201701/surfing-using-chrome.md)
 - [使用 Laravel](articles/201701/laravel.md)
 - [使用 Github Pages 创建网站](articles/201701/github-pages.md)
