@@ -2,6 +2,7 @@
 
 ## 2017 年 2 月
 
+- [jQuery 演变史](https://hackmd.io/s/rkiZFRyKg)
 - [awsm.css 文档阅读笔记](articles/201702/read-awsm.css-docs.md)
 
 ## 2017 年 1 月
