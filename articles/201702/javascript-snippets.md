@@ -1,14 +1,114 @@
 # JavaScript 奇妙物语
 
 ## 目录
+
+- jQuery Free
 - ES6
     - `rest` 参数和扩展运算符
 - 辨析 `call()`、`apply` 和 `bind()`
-- 模拟 jQuery Ajax 方法
 - `Array.prototype.slice()` 将类数组转换成数组
 - `Function.prototype.bind()` 参数绑定
 
 ---
+
+## [如何做到 jQuery Free](http://www.ruanyifeng.com/blog/2013/05/jquery-free.html)
+
+### DOM 选择器
+
+```javascript
+function $(selector, context) {
+  context = context || document;
+  if (selector.indexOf('#') === 0) {
+    return context.querySelectorAll(selector)[0];
+  }
+  return context.querySelectorAll(selector);;
+}
+```
+
+### DOM 操作
+
+```javascript
+// 尾部追加
+parent.appendChild(child);
+
+// 之前插入
+parent.insertBefore(child, parent.childNodes[0]);
+
+// 删除
+child.parentNode.removeChild(child)
+```
+
+### CSS 操作
+
+```javascript
+// className
+document.body.className = 'hasJS';
+
+// classList（IE 9不支持）
+document.body.classList.add('hasJS');
+document.body.classList.remove('hasJS');
+document.body.classList.toggle('hasJS');
+document.body.classList.contains('hasJS');
+
+// DOM 元素的 style 属性
+element.style.color = "red";
+element.style.cssText += 'color:red';
+```
+
+### 事件处理
+
+```javascript
+// 监听
+Element.prototype.on = Element.prototype.addEventListener;
+NodeList.prototype.on = function (event, fn) {
+    [].forEach.call(this, function (el) {
+        el.on(event, fn);
+    });
+    return this;
+};
+// 触发
+Element.prototype.trigger = function (type, data) {
+    var event = document.createEvent('HTMLEvents');
+    event.initEvent(type, true, true);
+    event.data = data || {};
+    event.eventName = type;
+    event.target = this;
+    this.dispatchEvent(event);
+    return this;
+};
+NodeList.prototype.trigger = function (event) {
+    [].forEach.call(this, function (el) {
+      el['trigger'](event);
+    });
+    return this;
+};
+```
+
+### Ajax 方法
+
+```javascript
+function request(type, url, opts, callback) {
+  var xhr = new XMLHttpRequest();
+  if (typeof opts === 'function') {
+    callback = opts;
+    opts = null;
+  }
+  xhr.open(type, url);
+  var fd = new FormData();
+  if (type === 'POST' && opts) {
+    for (var key in opts) {
+      fd.append(key, JSON.stringify(opts[key]));
+    }
+  }
+  xhr.onload = function () {
+    callback(JSON.parse(xhr.response));
+  };
+  xhr.send(opts ? fd : null);
+}
+
+var get = request.bind(this, 'GET');
+var post = request.bind(this, 'POST');
+```
 
 ## ES6
 
@@ -79,36 +179,6 @@ var me = {name, age};
 sayHi.bind(me)("苹果","梨子");
 sayHi.call(me, "苹果","梨子");
 sayHi.apply(me, ["苹果","梨子"]);
-```
-
-## 模拟 jQuery Ajax 方法
-
-```javascript
-function request(type, url, opts, callback) {
-  var xhr = new XMLHttpRequest();
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = null;
-  }
-  xhr.open(type, url);
-  var fd = new FormData();
-  if (type === 'POST' && opts) {
-    for (var key in opts) {
-      fd.append(key, JSON.stringify(opts[key]));
-    }
-  }
-  xhr.onload = function () {
-    callback(JSON.parse(xhr.response));
-  };
-  xhr.send(opts ? fd : null);
-}
-```
-
-基于 `request` 函数，模拟 jQuery 的 `get` 和 `post` 方法。
-
-```
-var get = request.bind(this, 'GET');
-var post = request.bind(this, 'POST');
 ```
 
 ## 使用 `slice` 将类数组转换成数组
