@@ -1,5 +1,13 @@
 ## 流水操作
 
+## 2017/2/15
+
+```javascript
+function addEvent(t, e, n) {
+  window.attachEvent ? t.attachEvent("on" + e, n) : window.addEventListener && t.addEventListener(e, n, !1)
+}
+```
+
 ## 2017/1/20
 
 [Arukas.io（樱花docker）免费搭建个人SS服务](http://www.iqcni.com/other/12.html)
