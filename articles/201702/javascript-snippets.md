@@ -2,10 +2,40 @@
 
 ## 目录
 
+- 模拟 jQuery Ajax 方法
 - `Array.prototype.slice()` 将类数组转换成数组
 - `Function.prototype.bind()` 参数绑定
 
 ---
+## 模拟 jQuery Ajax 方法
+
+```javascript
+function request(type, url, opts, callback) {
+  var xhr = new XMLHttpRequest();
+  if (typeof opts === 'function') {
+    callback = opts;
+    opts = null;
+  }
+  xhr.open(type, url);
+  var fd = new FormData();
+  if (type === 'POST' && opts) {
+    for (var key in opts) {
+      fd.append(key, JSON.stringify(opts[key]));
+    }
+  }
+  xhr.onload = function () {
+    callback(JSON.parse(xhr.response));
+  };
+  xhr.send(opts ? fd : null);
+}
+```
+
+基于 `request` 函数，模拟 jQuery 的 `get` 和 `post` 方法。
+
+```
+var get = request.bind(this, 'GET');
+var post = request.bind(this, 'POST');
+```
 
 ## 使用 `slice` 将类数组转换成数组
 
