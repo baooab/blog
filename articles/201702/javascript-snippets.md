@@ -2,7 +2,7 @@
 
 ## 目录
 
-- jQuery Free
+- 如何做到 jQuery Free
 - ES6
     - `rest` 参数和扩展运算符
 - 辨析 `call()`、`apply` 和 `bind()`
@@ -11,7 +11,9 @@
 
 ---
 
-## [如何做到 jQuery Free](http://www.ruanyifeng.com/blog/2013/05/jquery-free.html)
+## 如何做到 jQuery Free
+
+> 本文转载自[这里](http://www.ruanyifeng.com/blog/2013/05/jquery-free.html)。
 
 ### DOM 选择器
 
@@ -83,6 +85,8 @@ NodeList.prototype.trigger = function (event) {
     return this;
 };
 ```
+
+如何自定义事件和相关代码可以看[这里](http://www.zhangxinxu.com/wordpress/2012/04/js-dom%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6/)。
 
 ### Ajax 方法
 
