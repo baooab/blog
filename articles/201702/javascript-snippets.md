@@ -1,13 +1,47 @@
 # JavaScript 奇妙物语
 
 ## 目录
-
+- ES6
+    - `rest` 参数和扩展运算符
 - 辨析 `call()`、`apply` 和 `bind()`
 - 模拟 jQuery Ajax 方法
 - `Array.prototype.slice()` 将类数组转换成数组
 - `Function.prototype.bind()` 参数绑定
 
 ---
+
+## ES6
+
+### `rest` 参数和扩展运算符
+
+`rest` 参数的形式为 `...变量名`；扩展运算符是三个点 `...`。
+
+#### `rest` 参数
+
+```
+function add(...values) {
+  console.log(values);
+} 
+
+add([2, 3, 5]); // [Array[3]]
+```
+
+传递给 `add` 函数的一组参数值，被整合成了数组 `values`。没错，`rest` 参数搭配的变量是一个数组。这样就不需要使用 `arguments` 对象了。
+
+需要注意的是，`rest` 参数后面不能再有其他参数
+
+```
+function f(a, ...b, c) {...} // 报错！
+```
+
+#### 扩展运算符
+
+扩展运算符是 `rest`参数的逆运算，将数组转化为用逗号分隔的参数列表。
+
+```
+console.log(1, ...[2, 3, 5], 6); // 1 2 3 5 6
+console.log(1, ...[2, 3, [5]], 6); // 1 2 3 [5] 6
+```
 
 ## 辨析 `call()`、`apply` 和 `bind()`
 
