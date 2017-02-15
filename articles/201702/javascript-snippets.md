@@ -2,11 +2,51 @@
 
 ## 目录
 
+- 辨析 `call()`、`apply` 和 `bind()`
 - 模拟 jQuery Ajax 方法
 - `Array.prototype.slice()` 将类数组转换成数组
 - `Function.prototype.bind()` 参数绑定
 
 ---
+
+## 辨析 `call()`、`apply` 和 `bind()`
+
+`call()` 和 `apply` 指函数调用。`call()` 和 `apply()` 的区别仅是第二个参数的类型，`call()` 的第二个参数是一组值，`apply()` 的第二个参数是一
+个数组。
+
+```javascript
+fn.call(ctx, arg1, arg2, arg3...);
+fn.apply(ctx, [arg1, arg2, arg3...]);
+```
+`bind()` 是函数绑定，不会立即执行。若要执行函数代码，需要显式调用。
+
+```javascript
+fn.bind(ctx)(arg1, arg2, arg3...);
+fn.bind(ctx)([arg1, arg2, arg3...]);
+```
+
+下面是例子：
+
+```javascript
+function sayHi() {
+    let words = "我的名字叫" + this.name + ", 我" + this.age + "岁了。";
+    if (arguments.length > 0) { words += "我喜欢吃"}
+    for (let arg of arguments) {
+        words += arg
+    }
+    console.log(words);
+}
+
+var name = "baooab";
+var age = 25;
+var me = {name, age};
+
+// 皆输出：我的名字叫baooab, 我25岁了。我喜欢吃苹果梨子
+sayHi.bind(me)("苹果","梨子");
+sayHi.call(me, "苹果","梨子");
+sayHi.apply(me, ["苹果","梨子"]);
+```
+
 ## 模拟 jQuery Ajax 方法
 
 ```javascript
