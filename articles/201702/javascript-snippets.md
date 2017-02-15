@@ -2,9 +2,22 @@
 
 ## 目录
 
-- `bind` 方法的参数绑定
+- `Array.prototype.slice()` 将类数组转换成数组
+- `Function.prototype.bind()` 参数绑定
 
 ---
+
+## 使用 `slice` 将类数组转换成数组
+
+`slice(start, end)` 可以用来截取数组（方式是返回一个新数组，不改变原数组），也可以将**类数组转换成数组**。类数组对象（array-like object）指有
+数字索引和 `length` 属性的对象。比如：`NodeList` 集合以及函数内部的 `arguments` 对象。
+
+```javascript
+Array.prototype.slice.call(arguments);
+Array.prototype.slice.call(myNodeList);
+```
+
+`slice` 方法的内部实现机制：当前上下文对象类型不是数组时，就当做类数组对象进行遍历，将遍历结果存入一个新建数组，最后返回该新数组。
 
 ## `bind` 方法的参数绑定
 
