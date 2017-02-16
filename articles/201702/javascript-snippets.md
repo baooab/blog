@@ -1,6 +1,8 @@
 # JavaScript 奇妙物语
 
 ## 目录
+
+- 函数表达式
 - ECMAScript Function 对象
 - 如何做到 jQuery Free
 - ES6
@@ -10,6 +12,19 @@
 - `Function.prototype.bind()` 参数绑定
 
 ---
+
+## 函数表达式
+
+```javascript
+var a = 2;
+(function foo() {
+    var a = 3;
+    console.log(a); // 3
+})(); 
+console.log(a); // 2
+```
+
+立即执行函数利用地就是函数表达式。这样带来的好处：避免函数名污染全局；避免显式调用函数。
 
 ## ECMAScript `Function` 对象
 
