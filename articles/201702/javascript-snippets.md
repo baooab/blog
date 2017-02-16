@@ -1,7 +1,7 @@
 # JavaScript 奇妙物语
 
 ## 目录
-
+- ECMAScript Function 对象
 - 如何做到 jQuery Free
 - ES6
     - `rest` 参数和扩展运算符
@@ -10,6 +10,30 @@
 - `Function.prototype.bind()` 参数绑定
 
 ---
+
+## ECMAScript `Function` 对象
+
+用户 `Function` 类创建函数的语法：
+
+```javascript
+var function_name = new function(arg1, arg2, ..., argN, function_body);
+```
+
+最后一个参数是函数主体，前面都是函数形参。
+
+举个例子：
+
+```javascript
+function sayHi(sName, sMessage) {
+  alert("Hello " + sName + sMessage);
+}
+
+// 相当于
+
+var sayHi 
+= 
+new Function("sName", "sMessage", "alert(\"Hello \" + sName + sMessage);");
+```
 
 ## 如何做到 jQuery Free
 
