@@ -1,5 +1,10 @@
 # Blog Archives
 
+## 2017 年 5 月
+
+- [Laravel Gate 授权方式的使用指南](http://www.cnblogs.com/zhangbao/p/6807950.html)
+- [一步一步带你构建第一个 Laravel 项目](http://www.cnblogs.com/zhangbao/p/6813881.html)
+ 
 ## 2017 年 4 月
 
 - [XMLHttpRequest API 使用指南](http://www.cnblogs.com/zhangbao/p/6692189.html)
