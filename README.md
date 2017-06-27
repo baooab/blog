@@ -1,5 +1,9 @@
 # Blog Archives
 
+## 2017 年 6 月
+
+- [乱炖社区开源项目](https://github.com/baooab/SalivaForum)
+
 ## 2017 年 5 月
 
 - [Laravel Gate 授权方式的使用指南](http://www.cnblogs.com/zhangbao/p/6807950.html)
