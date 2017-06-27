@@ -1014,36 +1014,211 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>installing-git</title></head><body><article class="markdown-body"><h1 id="windows-10-git"><a name="user-content-windows-10-git" href="#windows-10-git" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>在 Windows 10 系统中安装 Git</h1>
-<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>简介</h2>
-<p>在 <a href="https://git-scm.com/">git-scm.com</a> 上下载 Git for Windows 版本（此处以“Git-2.13.1.2-64-bit.exe”为例）。</p>
-<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第一步</h2>
-<p><img alt="第一步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step1.png" /></p>
-<h2 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第二步</h2>
-<p><img alt="第二步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step2.png" /></p>
-<h2 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第三步</h2>
-<p><img alt="第三步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step3.png" /></p>
-<h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第四步</h2>
-<p><img alt="第四步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step4.png" /></p>
-<h2 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第五步</h2>
-<p><img alt="第五步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step5.png" /></p>
-<h2 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第六步</h2>
-<p><img alt="第六步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step6.png" /></p>
-<h2 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第七步</h2>
-<p><img alt="第七步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step7.png" /></p>
-<h2 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第八步</h2>
-<p><img alt="第八步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step8.png" /></p>
-<h2 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第九步</h2>
-<p><img alt="第九步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step9.png" /></p>
-<h2 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第十步</h2>
-<p><img alt="第十步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step10.png" /></p>
-<h2 id="_12"><a name="user-content-_12" href="#_12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第十一步</h2>
-<p><img alt="第十一步" src="///D://Code/GithubProjects/blog/tutorials/images/Getting-Started-Installing-Git/step11.png" /></p>
-<h2 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>第十二步</h2>
-<p>自报家门。打开 Git Bash，输入你的信息。</p>
-<pre><code>$ git config --global user.email &quot;you@example.com&quot;
-$ git config --global user.name &quot;Your Name&quot;
-
+</style><title>installing-wnmp</title></head><body><article class="markdown-body"><h2 id="windows-10-wnmp"><a name="user-content-windows-10-wnmp" href="#windows-10-wnmp" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>在 Windows 10 系统中安装 WNMP 环境</h2>
+<p>WNMP 又称 WEMP，即 Windows 系统下的 Nginx、MariaDB 和 PHP 环境搭建。</p>
+<p>这份教程的最后，我们将 WNMP 环境统一搭建在了 <code>D:\wnmp</code> 目录下，这份目录的清单是这样的。</p>
+<pre><code>wnmp/
+├── php/
+│   └── 7.1.6/
+|       ├── php.ini
+|       ├── php-cgi.exe
+|       └── php.exe
+├── nginx/
+│   └── 1.13.1/
+|       └── conf/
+|           └── nginx.conf
+└── www/
+    └── index.html
 </code></pre>
 
-<p>现在可以使用 Git 了！   </p></article></body></html>
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>原料</h2>
+<ol>
+<li>PHP</li>
+</ol>
+<p>下载地址：<a href="http://windows.php.net/download">php.net</a>。</p>
+<p>要注意的是，Nginx 需使用 PHP 的 FastCGI Server 模块，下载的 PHP 版本是“Non Thread Safe”的。</p>
+<p>比如：我下载的 PHP 版本文件名为 <code>php-7.1.6-nts-Win32-VC14-x64.zip</code>。</p>
+<ol>
+<li>Nginx</li>
+</ol>
+<p>下载地址：<a href="http://nginx.org/en/download.html">nginx.org</a>。</p>
+<p>我下载的 Nginx 版本文件名为 <code>nginx-1.13.1.zip</code>。</p>
+<ol>
+<li>RunHiddenConsole</li>
+</ol>
+<p>这是一个 exe 文件，是为了保证之后编写的启动 Nginx 服务器的 <code>start_nginx.bat</code> 脚本和关闭 Nginx 服务器的 <code>stop_nginx.bat</code> 脚本执行后立即关闭，隐藏于后台。</p>
+<p>下载地址：<a href="http://redmine.lighttpd.net/attachments/660/RunHiddenConsole.zip">lighttpd.net</a>。</p>
+<p>文件名即为 <code>RunHiddenConsole.zip</code>。</p>
+<ol>
+<li>MariaDB</li>
+</ol>
+<p>下载地址：<a href="https://downloads.mariadb.org/">mariadb.org</a>。</p>
+<p>我下载的 MariaDB 版本文件名为 <code>mariadb-10.2.6-winx64.msi</code>。</p>
+<h2 id="php"><a name="user-content-php" href="#php" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>安装 PHP</h2>
+<p>因为 PHP 版本是 7.1.6，将 <code>php-7.1.6-nts-Win32-VC14-x64.zip</code> 里的内容解压到 <code>D:\wnmp\php\7.1.6</code> 目录下。</p>
+<h3 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>修改配置</h3>
+<p>将 <code>php.ini-development</code> 重命名为 <code>php.ini</code>。进入修改三处。 </p>
+<ol>
+<li>指定 PHP 扩展目录</li>
+</ol>
+<p>PHP 扩展就放在 ext 文件夹下。指定扩展目录时，使用绝对路径。</p>
+<pre><code>; 去掉注释，指定扩展目录
+
+; On windows:
+extension_dir = &quot;C:/wnmp/php7.1.5/ext&quot;
+</code></pre>
+
+<ol>
+<li>启用扩展</li>
+</ol>
+<p>默认许多扩展并没有开启，比如 mysqli、 openSSL。所以需要手动去掉注释，启用一些扩展。</p>
+<p>为了方便日后使用，把下面的扩展去掉注释。</p>
+<pre><code>; 像下面这样去掉注释，指定启用的扩展目录
+
+; Windows Extensions
+; Note that ODBC support is built in, so no dll is needed for it.
+; Note that many DLL files are located in the extensions/ (PHP 4) ext/ (PHP 5+)
+; extension folders as well as the separate PECL DLL download (PHP 5+).
+; Be sure to appropriately set the extension_dir directive.
+;
+extension=php_bz2.dll
+extension=php_curl.dll
+extension=php_fileinfo.dll
+;extension=php_ftp.dll
+extension=php_gd2.dll
+extension=php_gettext.dll
+extension=php_gmp.dll
+extension=php_intl.dll
+extension=php_imap.dll
+;extension=php_interbase.dll
+extension=php_ldap.dll
+extension=php_mbstring.dll
+extension=php_exif.dll      ; Must be after mbstring as it depends on it
+extension=php_mysqli.dll
+;extension=php_oci8_12c.dll  ; Use with Oracle Database 12c Instant Client
+extension=php_openssl.dll
+;extension=php_pdo_firebird.dll
+extension=php_pdo_mysql.dll
+;extension=php_pdo_oci.dll
+;extension=php_pdo_odbc.dll
+;extension=php_pdo_pgsql.dll
+extension=php_pdo_sqlite.dll
+;extension=php_pgsql.dll
+;extension=php_shmop.dll
+
+; The MIBS data available in the PHP distribution must be installed.
+; See http://www.php.net/manual/en/snmp.installation.php
+;extension=php_snmp.dll
+
+extension=php_soap.dll
+extension=php_sockets.dll
+extension=php_sqlite3.dll
+;extension=php_tidy.dll
+extension=php_xmlrpc.dll
+extension=php_xsl.dll
+</code></pre>
+
+<ol>
+<li>设置 cgi.fix_pathinfo。</li>
+</ol>
+<pre><code>; 去掉注释，将 cgi.fix_pathinfo 设置为 1
+
+cgi.fix_pathinfo=1
+</code></pre>
+
+<h3 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>设置全局变量</h3>
+<p>将路径 <code>D:\wnmp\php\7.1.6</code> 设置到系统全局环境变量 <code>PATH</code> 里。</p>
+<p>进入命令界面，输入如下命令，如果正确输出版本号，说明设置成功。</p>
+<pre><code>$ php -v
+PHP 7.1.6 (cli) (built: Jun  8 2017 01:52:52) ( NTS MSVC14 (Visual C++ 2015) x64
+ )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+</code></pre>
+
+<h2 id="nginx"><a name="user-content-nginx" href="#nginx" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>安装 Nginx</h2>
+<p>解压 <code>nginx-1.13.1.zip</code> 文件中内容到 <code>D:\wnmp\nginx\1.13.1</code> 目录下。</p>
+<h2 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>修改配置</h2>
+<p>进入 <code>conf</code> 目录，编辑配置文件 <code>nginx.conf</code>。修改 80 端口的 Server 配置信息，具体如下。</p>
+<pre><code>location / {
+    root   html;
+    index  index.html index.htm;
+}
+
+# 改为
+
+location / {
+    root   D:/wnmp/www;
+    index  index.php index.html index.htm;
+}
+</code></pre>
+
+<pre><code># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+#
+#location ~ \.php$ {
+#    root           html;
+#    fastcgi_pass   127.0.0.1:9000;
+#    fastcgi_index  index.php;
+#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+#    include        fastcgi_params;
+#}
+
+# 改为
+
+# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+#
+location ~ \.php$ {
+    root           D:/wnmp/www;
+    fastcgi_pass   127.0.0.1:9000;
+    fastcgi_index  index.php;
+    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+    include        fastcgi_params;
+}
+</code></pre>
+
+<p>要注意两点：</p>
+<ol>
+<li>
+<p>我们将网站根目录设置到了 <code>D:/wnmp/www</code> 目录中，所以<strong>务必要创建 <code>D:/wnmp/www</code> 目录</strong>！</p>
+</li>
+<li>
+<p>最后一部分配置内容是将 <code>.php</code> 后缀的文件都交给 PHP 开在 9000 端口的 FastCGI Server 处理。</p>
+</li>
+</ol>
+<h2 id="nginx_1"><a name="user-content-nginx_1" href="#nginx_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>开启 Nginx 服务器</h2>
+<p>第一步，解压 <code>RunHiddenConsole.zip</code> 文件得到 <code>RunHiddenConsole.exe</code>，将它放在与 <code>php.exe</code> 同级的目录，就是本教程的 <code>D:\wnmp\php\7.1.6</code> 目录。</p>
+<p>我们已经说过，<code>RunHiddenConsole.exe</code> 的作用为了保证启动 Nginx 服务器的 <code>start_nginx.bat</code> 脚本和关闭 Nginx 服务器的 <code>stop_nginx.bat</code> 脚本执行后立即关闭，隐藏于后台的。</p>
+<p>接下来，我们来编写启动和关闭 Nginx 服务器的脚本，它们放在与 <code>nginx.exe</code> 同级的目录中，就是本教程的 <code>D:\wnmp\nginx\1.13.1</code> 目录。</p>
+<h3 id="nginx_2"><a name="user-content-nginx_2" href="#nginx_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>启动 Nginx 的脚本</h3>
+<p>启动 Nginx 的脚本名为 <code>start_nginx.bat</code>。内容如下：</p>
+<pre><code>@echo off
+
+REM 每个进程处理的最大请求数，或设置为 Windows 环境变量
+set PHP_FCGI_MAX_REQUESTS=1000
+
+echo Starting PHP FastCGI...
+RunHiddenConsole php-cgi -b 127.0.0.1:9000 -c D:/wnmp/php/7.1.6/php.ini
+
+echo Starting nginx...
+RunHiddenConsole ./nginx.exe -p D:/wnmp/nginx/1.13.1
+</code></pre>
+
+<h3 id="nginx_3"><a name="user-content-nginx_3" href="#nginx_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>关闭 Nginx 的脚本</h3>
+<p>关闭 Nginx 的脚本名为 <code>stop_nginx.bat</code>。内容如下：</p>
+<pre><code>@echo off
+echo Stopping nginx...  
+taskkill /F /IM nginx.exe &gt; nul
+echo Stopping PHP FastCGI...
+taskkill /F /IM php-cgi.exe &gt; nul
+exit
+</code></pre>
+
+<h3 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>浏览器访问</h3>
+<p>在 <code>D:/wnmp/www</code> 中创建文件 <code>index.php</code>。</p>
+<pre><code>&lt;?php
+    phpinfo();
+&gt;
+</code></pre>
+
+<p>点击 <code>start_nginx.bat</code> 文件，浏览器输入 <a href="http://localhost/">http://localhost/</a> ，如果出现如下界面，表示服务器安装成功！</p>
+<p><img alt="phpinfo" src="///D://Code/GithubProjects/blog/tutorials/images/Installing-WNMP/phpinfo.png" /></p></article></body></html>

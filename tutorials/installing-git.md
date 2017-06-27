@@ -1,4 +1,4 @@
-## 在 Windows 10 系统中安装 Git
+# 在 Windows 10 系统中安装 Git
 
 ## 简介
 
