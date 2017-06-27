@@ -34,4 +34,19 @@ C:\Users\zhangb>composer -V
 Composer version 1.4.2 2017-05-17 08:17:52
 ```
 
+## 设置中国镜像
+
+因为一些不得而知的原因，国外镜像下载速度并不稳定。接下来，将依赖的包下载源更换成 [Composer 中国全量镜像][2] 提供的地址。
+
+```
+$ composer config -g repo.packagist composer https://packagist.phpcomposer.com
+```
+
+查阅是否更换成功。
+
+```
+$ composer config -gl
+```
+
 [1]: https://getcomposer.org/download/
+[2]: https://pkg.phpcomposer.com/
