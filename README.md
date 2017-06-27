@@ -3,9 +3,9 @@
 ## 2017 年 6 月
 
 - [乱炖社区开源项目](https://github.com/baooab/SalivaForum)
-- [在 Windows 10 系统中安装 Git](./installing-git.md)
-- [在 Windows 10 系统中安装 WNMP 环境](./installing-wnmp.md)
-- [在 Windows 10 系统中安装 Composer](./installing-composer.md)
+- [在 Windows 10 系统中安装 Git](tutorials/installing-git.md)
+- [在 Windows 10 系统中安装 WNMP 环境](tutorials/installing-wnmp.md)
+- [在 Windows 10 系统中安装 Composer](tutorials/installing-composer.md)
 
 ## 2017 年 5 月
 
