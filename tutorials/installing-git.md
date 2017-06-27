@@ -47,7 +47,18 @@
 ## 第十一步
 
 ![第十一步][11]
-	
+
+## 第十二步
+
+自报家门。打开 Git Bash，输入你的信息。
+
+```
+$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
+
+```
+
+现在可以使用 Git 了！	
 
 [1]: images/Getting-Started-Installing-Git/step1.png
 [2]: images/Getting-Started-Installing-Git/step2.png
