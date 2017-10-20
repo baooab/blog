@@ -7,7 +7,7 @@
 
 ## 2017 年 8 月
 
-- [Laraevl 中奇妙的 Storage::url](https://laravel-china.org/articles/5617/wonderful-storage-url)
+- [Laravel 中奇妙的 Storage::url](https://laravel-china.org/articles/5617/wonderful-storage-url)
 
 ## 2017 年 7 月
 
