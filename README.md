@@ -1,5 +1,9 @@
 # Blog Archives
 
+## 2017 年 10 月
+
+- [JavaScript 函数的 `prototype` 属性](http://www.cnblogs.com/zhangbao/p/7698908.html)
+ 
 ## 2017 年 9 月
 
 - [Laravel 文档阅读：Eloquent 起步（上篇）](https://laravel-china.org/articles/5856/laravel-document-reading-eloquent-start-part-one)
