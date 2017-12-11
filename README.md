@@ -1,4 +1,4 @@
-# Blog Archives
+A backup of my blog articles.
 
 ## 2017 年 11 月
 
