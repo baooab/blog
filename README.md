@@ -9,6 +9,8 @@ Every day I wake up with confidence and then disappointed. So what? You should c
 - [图解 CSS 2D Transform 和 3D Transform](https://codepen.io/zhangbao/full/EEgbRr)
 - [CSS 自定义复选框：Toggle Switch](https://hackmd.io/s/B1wUHOOof)
 - [CSS Grid 布局入门教程](https://hackmd.io/s/rkPMcgsjM)
+- [CSS 属性：animation-direction](https://hackmd.io/s/BkJBHUwtz)
+- [我是应该用 Grid 还是 Flexbox?](https://hackmd.io/s/Syjv9ml2z)
 
 ### JavaScript
 
