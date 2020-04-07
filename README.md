@@ -1,5 +1,7 @@
 # Zhangbao's Blog
 
+> 已停止更新，最新文章数据请移步 [掘金](https://juejin.im/user/5a442f6b51882527a13dc784) ~
+
 Every day I wake up with confidence and then disappointed. So what? You should congratulate me, friends ---- always young, always with tears in my eyes.
 
 ## 技术
