@@ -6,7 +6,7 @@
 
 下面我简单总结一下。
 
-### #1. 写网站内容
+### 1. 写网站内容
 
 ```
 # 1. clone repository 「blog」 到本地
@@ -22,7 +22,7 @@ $ git commit -m "初次提交"
 $ git push -u origin master
 ```
 
-### #2. 开网站
+### 2. 开网站
 
 点击 repository 「Settings」选项卡。「GitHub Pages」>「Source」> 选择「master branch」> 点击「save」。
 
